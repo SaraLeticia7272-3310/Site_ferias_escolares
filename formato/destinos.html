@@ -15,44 +15,70 @@
 </head>
 
 <body id="destinos">
+    <header>
+        <div id="logo"></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="destinos.html">Destinos</a>
+            <a href="personalidades.html">Personalidades</a>
+            <a href="">alguma coisa</a>
+            <a href="">alguma coisa</a>
+        </nav>
+    </header>
 
-    <div id="containerDestinos">
+    <main id="main">
 
-        <header>
-            <div id="logo"></div>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="destinos.html">Destinos</a>
-                <a href="">alguma coisa</a>
-                <a href="">alguma coisa</a>
-                <a href="">alguma coisa</a>
-            </nav>
-        </header>
+        <div id="bloco">
 
-        <main>
-            <div class="slideshow" id="slideshow">
-                <div class="info-panel">
-                    <div class="info-title" id="info-title">Título inicial</div>
-                    <div class="info-text" id="info-text">Texto descriptivo de la imagen inicial.</div>
+            <h2>Destinos</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, tenetur. Distinctio sit commodi eum at
+                accusamus voluptatibus, labore sint dignissimos nisi corrupti officiis! Unde repellat aperiam dolorem
+                nisi quos temporibus!
+            </p>
+
+        </div>
+
+        <div id="categoria">
+
+            <h2>Categorias</h2>
+            <div id="itens">
+                <div class="sombra">
+                    <div class="item">sjbfjkadbfjkda</div>
                 </div>
-                <div class="carousel-container">
-                    <div class="carousel" id="carousel"></div>
+                <div class="sombra">
+                    <div class="item">sjbfjkadbfjkda</div>
                 </div>
-                <div class="arrow-controls">
-                    <button class="arrow left" aria-label="Anterior">&lt;</button>
-                    <button class="arrow right" aria-label="Siguiente">&gt;</button>
+                <div class="sombra">
+                    <div class="item">sjbfjkadbfjkda</div>
                 </div>
+
             </div>
-        </main>
 
-        <footer>
-            <p>© 2024 - Projeto Férias</p>
-        </footer>
+        </div>
 
+    </main>
+
+    <!-- CARROSSEL / MODAL -->
+    <div id="carrossel" class="hidden">
+        <div class="carrossel-content">
+
+            <button id="fecharCarrossel">✕</button>
+
+            <button id="prevSlide" class="nav-btn">❮</button>
+
+            <div id="slides"></div>
+
+            <button id="nextSlide" class="nav-btn">❯</button>
+        </div>
     </div>
 
-    <script src="Js/script.js"></script>
 
+    <footer>
+        <p>© 2024 - Projeto Férias</p>
+    </footer>
+
+    <script src="Js/script.js"></script>
 </body>
 
 </html>
