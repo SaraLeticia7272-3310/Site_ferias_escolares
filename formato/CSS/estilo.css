@@ -288,7 +288,6 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-
     z-index: 999;
 }
 
@@ -366,80 +365,112 @@ h1 {
     margin-top: 8%;
 }
 
+.card p {
+    font-size: larger;
+}
+
+#personalidades .card {
+    height: 80%;
+    width: 70%;
+    display: flex;
+    background-color: #e9fbfbc4;
+    place-items: center;
+    place-content: center;
+    border-radius: 15px;
+    box-shadow: 6px 8px 5px rgba(163, 208, 208, 0.5);
+    margin-bottom: 20px;
+}
+
 #bloco1 {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    background: red;
-    height: 70%;
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#personalidade #main p {
-    margin-top: 10px;
+    place-items: center;
+    place-content: center;
 }
 
 #bloco2 {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    background: rgb(0, 255, 238);
-    height: 70%;
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    place-items: center;
+    place-content: center;
 }
 
 #bloco3 {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    background: rgb(255, 0, 128);
-    height: 70%;
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    place-items: center;
+    place-content: center;
 }
 
 #bloco4 {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
-    background: rgb(255, 234, 0);
-    height: 70%;
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    place-items: center;
+    place-content: center;
 }
 
 #bloco5 {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
-    background: rgb(60, 30, 125);
-    height: 70%;
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    place-items: center;
+    place-content: center;
 }
 
 #bloco6 {
     grid-column: 2 / 3;
     grid-row: 4 / 5;
-    background: rgb(34, 255, 0);
-    height: 70%;
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    place-items: center;
+    place-content: center;
 }
 
 .personagem {
-    width: 13%;
-    height: 40%;
+    width: 26%;
+    height: 70%;
     margin: 20px;
-    border-radius: 50px;
+    border-radius: 100px;
     background: black;
+}
+
+.personagem:hover {
+    transform: scale(1.5);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin-right: 10%;
+}
+
+#espaco {
+    height: 50px;
+}
+
+#slide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.55);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#conteudo {
+    position: relative;
+    width: 70%;
+    height: 70%;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+#fechar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    cursor: pointer;
 }

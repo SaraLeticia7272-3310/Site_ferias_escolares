@@ -54,3 +54,42 @@ prevBtn.addEventListener("click", () => {
     if (slideAtual < 0) slideAtual = conteudoCategorias[categoriaAtual].length - 1;
     mostrarSlide();
 });
+
+/*========================================================================================
+        PERSONALIDADE
+========================================================================================*/
+// Conteúdo de cada personalidade
+const dados = {
+    guerreiro: `
+        <h2>Guerreiro</h2>
+        <p>Força elevada, defesa alta, especialista em combate corpo a corpo.</p>
+    `,
+    mago: `
+        <h2>Mago</h2>
+        <p>Alta inteligência, usa magias poderosas e controle elemental.</p>
+    `,
+    arqueiro: `
+        <h2>Arqueiro</h2>
+        <p>Alta precisão, ataques à distância e grande agilidade.</p>
+    `
+};
+
+// Pega elementos
+const cards = document.querySelectorAll(".card");
+const slide = document.getElementById("slide");
+const info = document.getElementById("info");
+const fechar = document.getElementById("fechar");
+
+// Abre o modal ao clicar no card
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+        const tipo = card.getAttribute("data-personalidade");
+        info.innerHTML = dados[tipo];   // Preenche o conteúdo
+        slide.style.display = "flex";   // Mostra o modal
+    });
+});
+
+// Fecha o modal
+fechar.addEventListener("click", () => {
+    slide.style.display = "none";
+});
