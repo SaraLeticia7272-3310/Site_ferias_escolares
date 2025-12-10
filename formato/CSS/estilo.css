@@ -25,16 +25,38 @@ header {
     align-items: center;
     gap: 10%;
     background-color: #272343;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
     padding: 10px;
     z-index: 1000;
 }
 
 #logo {
-    height: 70px;
-    width: 70px;
-    background-color: #781d1d;
+    height: 80px;
+    width: 140px;
     margin-left: 10%;
+    background-color: #fbf4ca;
+    border-radius: 10px;
+}
+
+#logo>img {
+    height: 200px;
+    width: 200px;
+    transform: translateY(-55px) translateX(-30px);
+}
+
+#hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+#hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fffffe;
+    margin: 3px 0;
+    transition: 0.3s;
 }
 
 nav {
@@ -86,6 +108,8 @@ footer {
 
 #index #main {
     background-color: #fbf4ca;
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 
 #index h1 {
@@ -98,23 +122,26 @@ footer {
     transform: translateY(40px);
 }
 
+/*cards*/
 #index #bloco {
     display: flex;
     justify-content: center;
     gap: 10%;
 }
 
-/*cards*/
+#index #cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #card1 {
     background: url(../assets/img/praia.jpg) no-repeat center center/cover;
-    padding: 20px;
-    margin-bottom: 20%;
 }
 
 #card2 {
     background: url(../assets/img/campo.jpg) no-repeat center center/cover;
-    padding: 20px;
-    margin: 20% 0 10% 0;
+    margin-top: 15%;
 }
 
 #index .card {
@@ -152,7 +179,6 @@ footer {
 #index .card:hover .overlay {
     background: rgba(0, 0, 0, 0.50);
 }
-
 
 #index .card .titulo {
     font-family: "Modak", system-ui;
@@ -270,7 +296,6 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 5%;
-
 }
 
 .item {
@@ -315,7 +340,7 @@ footer {
     position: relative;
     width: 70%;
     height: 70%;
-    background: white;
+    background-color: white;
     border-radius: 15px;
     overflow: hidden;
     display: flex;
@@ -331,8 +356,7 @@ footer {
     font-size: 25px;
     cursor: pointer;
     z-index: 1;
-    border-radius: 50px;
-    border: none;
+    background-color: transparent;
     filter: brightness(0) invert(1);
 }
 
@@ -363,6 +387,7 @@ footer {
     height: 100%;
     display: flex;
     font-size: 22px;
+
 }
 
 #destinos .slide {
@@ -373,13 +398,16 @@ footer {
 
 #destinos .slide img {
     width: 100%;
-    height: 100%;
+    height: 105%;
     object-fit: cover;
     position: relative;
     z-index: 0;
     transform: translateY(-77.5px);
 }
 
+#bemDitaFoto {
+    transform: translateY(-27.8px);
+}
 
 #destinos .slide p {
     font-size: 20px;
@@ -411,8 +439,6 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     background-color: #fbf4ca;
-
-
 }
 
 #personalidades h1 {
@@ -424,6 +450,7 @@ footer {
 
 #personalidades .card p {
     font-size: larger;
+    font-weight: bold;
 }
 
 #personalidades .card {
@@ -490,7 +517,7 @@ footer {
 }
 
 #personalidades #bloco5 .personagem {
-    background: url(../assets/img/avntureiro.png) no-repeat center/cover black;
+    background: url(../assets/img/familia.png) no-repeat center/cover;
 }
 
 #personalidades #bloco6 {
@@ -578,7 +605,7 @@ footer {
 #personalidades .cardPerfil p {
     font-size: 20px;
     line-height: 1.5;
-    text-align: justify;
+    text-align: start;
     width: 60%;
 }
 
@@ -601,16 +628,18 @@ footer {
 
 #organizacao #bloco {
     display: block;
-    margin: 20% 5% 5% 20%;
+    margin: 20% 5% 5% 10%;
     grid-row: 1;
     grid-column: 1 / 2;
     text-align: justify;
+    transform: translateY(50px);
 }
 
 #organizacao #bloco2 {
     grid-column: 2 / 3;
     grid-row: 1;
     margin: 25% 10% 5% 5%;
+    transform: translateY(-20px);
 }
 
 #organizacao h1 {
@@ -622,7 +651,8 @@ footer {
 }
 
 #organizacao .categoria {
-    padding: 5%;
+    padding: 1%;
+    margin: 8% 0;
 }
 
 #organizacao .categoria:hover {
@@ -702,7 +732,6 @@ footer {
     z-index: 9999;
 }
 
-/* Card branco */
 #organizacao #carrosselOrg-conteudo {
     position: relative;
     background: #dbf4f4;
@@ -740,7 +769,7 @@ footer {
 
 }
 
-#organizacao img {
+#organizacao .cards>img {
     width: 40%;
     border-radius: 20px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
@@ -856,7 +885,6 @@ footer {
 ============================================================ */
 
 #contato {
-    font-family: Arial, sans-serif;
     background: url(../assets/img/praia.jpg) no-repeat center center/cover;
     padding: 20px;
     margin-top: 8%;
@@ -1014,5 +1042,295 @@ input:valid~label {
 
     to {
         opacity: 1;
+    }
+}
+
+/* ============================================================
+                    RESPONSIVIDADE
+============================================================ */
+
+@media (max-width: 768px) {
+
+    #menu-toggle:checked~nav::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        pointer-events: none;
+    }
+
+    header {
+        gap: 5%;
+        padding: 8px;
+    }
+
+    #logo {
+        height: 80px;
+        width: 140px;
+        margin-left: 5%;
+    }
+
+    #hamburger {
+        margin-right: 5%;
+        display: flex;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #272343;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    #menu-toggle:checked~nav {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    #menu-toggle:checked~#hamburger span:nth-child(1) {
+        transform: rotate(-45deg) translate(-7px, 5px);
+    }
+
+    #menu-toggle:checked~#hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked~#hamburger span:nth-child(3) {
+        transform: rotate(45deg) translate(-7px, -5px);
+    }
+
+    /*============= INDEX =============*/
+
+    #index #main {
+        padding-top: 90px;
+        padding-bottom: 50px;
+    }
+
+    #index h1 {
+        font-size: 150%;
+        transform: translateY(10px);
+    }
+
+    #index #bloco {
+        display: block;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #cards {
+        margin-top: 10%;
+    }
+
+    #index .card {
+        height: 300px;
+    }
+
+    #card2 {
+        margin-top: 10%;
+    }
+
+    #index .card .titulo {
+        font-size: 24px;
+        text-shadow: 1px 1px 10px black;
+    }
+
+    #index .card .descricao {
+        font-size: 14px;
+    }
+
+    #index aside {
+        width: 80%;
+        margin: 10%;
+    }
+
+    #index ul {
+        margin-left: 50px;
+    }
+
+    /*============= DESTINO =============*/
+
+    #destinos {
+        overflow: hidden;
+    }
+
+    #destinos #main {
+        transform: translateY(50px);
+        display: block;
+    }
+
+    #destinos #bloco {
+        margin: 0 10%;
+        transform: translateY(90px);
+    }
+
+    #destinos h2 {
+        font-size: xx-large;
+        margin-bottom: 0%;
+    }
+
+    .carrossel-content {
+        width: 90%;
+        height: 80%;
+        transform: translateY(20px);
+    }
+
+    #slides {
+        width: 100%;
+        height: 100%;
+        font-size: 22px;
+    }
+
+    #destinos .slide img {
+        transform: translateY(-130px);
+    }
+
+    #destinos .slide p {
+        transform: translateX(60px);
+    }
+
+    .vidro {
+        width: 70%;
+        transform: translateX(110px) translateY(500px);
+    }
+
+    /*============= PERSONALIDADES =============*/
+
+    #personalidades #main {
+        height: 270vh;
+        display: block;
+    }
+
+    #personalidades h1 {
+        transform: translateY(60px);
+    }
+
+    #personalidades #main div {
+        margin: 5%;
+    }
+
+    #personalidades .card {
+        height: 30vh;
+        width: 80%;
+    }
+
+    #personalidades .card p {
+        font-size: xx-large;
+    }
+
+    #personalidades #bloco1>div {
+        margin-top: 10%;
+    }
+
+    #personalidades .personagem {
+        width: 35%;
+        height: 73%;
+    }
+
+    #personalidades #conteudo {
+        width: 90%;
+        height: 50%;
+    }
+
+    #personalidades .cardPerfil {
+        margin-top: 10%;
+    }
+
+    #personalidades .cardPerfil p {
+        width: 90%;
+    }
+
+    /*============= ORGANIZAÇÃO =============*/
+
+    #organizacao {
+        overflow: hidden;
+    }
+
+    #organizacao #main {
+        display: block;
+        height: 100vh;
+        transform: translateY(80px);
+
+    }
+
+    #organizacao #bloco {
+        display: block;
+        margin: 0 10%;
+    }
+
+    #organizacao #bloco2 {
+        margin: 5%;
+        transform: translateY(60px);
+    }
+
+    #organizacao .btn-one {
+        font-weight: bold;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+        background-color: #27234318;
+        border-top: 1px solid rgba(31, 20, 99, 0.5);
+        border-bottom: 1px solid rgba(31, 20, 99, 0.5);
+        padding: 10px;
+    }
+
+    #organizacao .btn-one::after,
+    #organizacao .btn-one:hover::after,
+    #organizacao .btn-one::before {
+        all: unset;
+        display: none;
+    }
+
+    #organizacao .categoria {
+        padding: 1%;
+        margin: 2% 0;
+    }
+
+    #organizacao .btn-one span {
+        transition: all 0.3s;
+        transform: translateY(0);
+    }
+
+    #organizacao #carrosselOrg-conteudo {
+        width: 90%;
+        height: 50%;
+    }
+
+    #organizacao .textoCard {
+        margin-left: 2%;
+        width: 50%;
+        text-align: justify;
+        transform: translateY(0px);
+
+    }
+
+    /*============= VÍDEOS =============*/
+
+    #videos .textoPrincipal {
+        margin: 35% 10% 10% 10%;
+    }
+
+    /*============= CONTATO =============*/
+
+    #contato {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    form {
+        transform: translateY(110px);
     }
 }

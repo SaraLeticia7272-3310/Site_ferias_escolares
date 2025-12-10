@@ -118,7 +118,7 @@ if (document.getElementById("slide")) {
         `,
         perfil5: `
             <div class='cardPerfil'>
-            <img class="fotoPersonagem" src="assets/img/.png">
+            <img class="fotoPersonagem" src="assets/img/familia.png">
             <div class="texto">
                 <h3>O Família</h3>
                 <p>

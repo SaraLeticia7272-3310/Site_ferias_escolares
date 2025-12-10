@@ -23,3 +23,13 @@ if (location.pathname.endsWith("processa.html")) {
 
 }
 
+/*=========================================================================================================
+            MENU HAMBURGUER
+=========================================================================================================*/
+
+const btn = document.getElementById("menuBtn");
+const nav = document.querySelector("nav");
+
+btn.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
