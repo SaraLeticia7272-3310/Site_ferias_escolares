@@ -1160,6 +1160,7 @@ input:valid~label {
 
     /*============= DESTINO =============*/
     #destinos #main {
+        height: 100vh;
         transform: translateY(50px);
         display: block;
     }
@@ -1478,6 +1479,6 @@ input:valid~label {
     }
 
     form {
-        transform: translateY(50%);
+        transform: translateY(30%);
     }
 }
