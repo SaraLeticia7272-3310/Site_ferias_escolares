@@ -1159,11 +1159,6 @@ input:valid~label {
     }
 
     /*============= DESTINO =============*/
-
-    #destinos {
-        overflow: hidden;
-    }
-
     #destinos #main {
         transform: translateY(50px);
         display: block;
